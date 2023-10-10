@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="background-left">
+        <div class="logo">
+          <img src="css/images/logo.svg" alt="" />
+        </div>
+        <img src="css/images/illustration.svg" alt="" />
+        <div class="text">
+          Start for free & get <br />acctractive offers today!
+        </div>
+      </div>
+      <div class="content">
+        <!-- logo, bakcground, text-->
+
+        <div class="image"></div>
+      </div>
+      <!-- #region register, login, (google, facebook)-->
+      <form id="form">
+        <div class="social">
+          <div class="title">Get Started</div>
+          <div class="quetion">
+            Already Have An Account? <br />
+            <span>Sign In</span>
+          </div>
+          <div class="btn">
+            <div class="btn1">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/google-logo.png"
+                alt="google-logo"
+              />
+              Sign Up
+            </div>
+
+            <div class="btn2">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/facebook-new.png"
+                alt="facebook-new"
+              />
+              Sign Up
+            </div>
+            <div>Or</div>
+          </div>
+        </div>
+
+        <!-- input usename -->
+
+        <div>
+          <label for="usename">User Name:</label>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="usename"
+            id="usename"
+            placeholder="James Bond"
+          />
+        </div>
+
+        <!-- input email -->
+
+        <div>
+          <label for="email">Email:</label>
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="bond@gmail.com"
+          />
+        </div>
+
+        <!-- input password -->
+
+        <div>
+          <label for="password">Password:</label>
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
