@@ -14,11 +14,13 @@ body {
     margin: 0 auto;
     height: 620px;
     border: thin solid rgb(214, 208, 208);
-    justify-content: space-between;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .background-left {
     background-color: #d23c2e;
+    
 }
 
 .text {
@@ -28,8 +30,12 @@ body {
 
 form{
     width: 100%;
+    max-width: 300px;
 }
 
+#form{
+    margin-left: 20px;
+}
 .quetion {
     margin-top: 20px;
   }
@@ -42,6 +48,7 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    /* max-width: 300px; */
 }
 .btn .signup {
     display: flex;
@@ -92,18 +99,22 @@ form{
     /* left: 15px; */
 }
 .input-item input{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 5px;
     padding-left: 30px;
     border: 1px solid gray;
 }
 
-input:focus-within{
-    border: 1px solid #d23c2e;
+input:focus{
+        /* background-color: ; */
+    border: 2px solid #d23c2e;
+    outline: none;
 
 }
 #submit{
     width: 100%;
+    /* max-width: 300px; */
     margin-top: 20px;
     padding: 8px;
     background-color: #d23c2e;
