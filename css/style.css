@@ -10,9 +10,11 @@ body {
 .container {
     display: flex;
     max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     height: 620px;
     border: thin solid rgb(214, 208, 208);
+    justify-content: space-between;
 }
 
 .background-left {
@@ -23,3 +25,96 @@ body {
     text-align: center;
     color: white;
 }
+
+form{
+    width: 100%;
+}
+
+.quetion {
+    margin-top: 20px;
+  }
+
+  .quetion span {
+    color: red;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.btn .signup {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn .signup .btn1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn .signup .btn2{
+    background-color: #73acf2;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn :nth-child(2){
+    padding: 15px 0px 0px 0px;
+    /* margin-top: 15px; */
+    display: flex;
+    justify-content: center;
+}
+
+.input-box{
+    margin-top: 20px;
+}
+
+.input-item{
+    position: relative;
+
+}
+
+.input-item i{
+    position: absolute;
+    left: 10px;
+    top: 23%;
+    /* left: 15px; */
+}
+.input-item input{
+    width: 300px;
+    padding: 5px;
+    padding-left: 30px;
+    border: 1px solid gray;
+}
+
+input:focus-within{
+    border: 1px solid #d23c2e;
+
+}
+#submit{
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #d23c2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+#submit:hover{
+    background-color: red;
+}
+
+
