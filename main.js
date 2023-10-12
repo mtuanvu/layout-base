@@ -5,10 +5,10 @@ let classes = (classes) => document.getElementsByClassName(classes);
 let username = id("username"),
   email = id("email"),
   password = id("password"),
-  form = id("form");
-(errorMsg = classes("error")),
-  (successIcon = classes("success-icon")),
-  (failureIon = classes("failure-icon"));
+  form = id("form"),
+  errorMsg = classes("error"),
+  successIcon = classes("success-icon"),
+  failureIon = classes("failure-icon");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
 });
 
 let engine = (id, serial, message) => {
-  if (id.valua.trim() === "") {
+  if (id.value.trim() === "") {
     errorMsg[serial].innerHTML = message;
     id.style.border = "2px solit red";
 
