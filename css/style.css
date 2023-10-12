@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,125 +7,174 @@
 body {
     font-family: sans-serif;
 }
+
 .container {
     display: flex;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-    height: 620px;
-    border: thin solid rgb(214, 208, 208);
-    justify-content: center;
-    /* align-items: center; */
+    flex-direction: row;
 }
 
-.background-left {
-    background-color: #d23c2e;
-    
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f2796e;
+    width: 55%;
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
+.image {
+    background-image: url(css/images/illustration.svg);
+    height: 65%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
 }
 
 .text {
     text-align: center;
     color: white;
+    font-size: 18px;
 }
 
-form{
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form div input {
     width: 100%;
-    max-width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#form{
-    margin-left: 20px;
+label {
+    display: block;
+    margin-bottom: 5px;
 }
-.quetion {
-    margin-top: 20px;
-  }
 
-  .quetion span {
-    color: red;
+form div {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border: 2px solid #f2796e;
 }
 
 .btn {
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    /* max-width: 300px; */
-}
-.btn .signup {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    gap: 15px;
 }
 
-.btn .signup .btn1{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 7px 10px;
+.btn1,.btn2 {
+    padding: 10px 5px;
+    width: 100%;
     display: flex;
+    gap: 15px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.btn .signup .btn2{
-    background-color: #73acf2;
-    /* border: 1px solid black; */
-    border-radius: 5px;
-    padding: 7px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.btn2 {
+    background-color: #4f70b5;
+    color: white;
 }
 
-.btn :nth-child(2){
-    padding: 15px 0px 0px 0px;
-    /* margin-top: 15px; */
-    display: flex;
-    justify-content: center;
-}
-
-.input-box{
-    margin-top: 20px;
-}
-
-.input-item{
-    position: relative;
-
-}
-
-.input-item i{
+form div i {
     position: absolute;
-    left: 10px;
-    top: 23%;
-    /* left: 15px; */
-}
-.input-item input{
-    width: 100%;
-    max-width: 300px;
-    padding: 5px;
-    padding-left: 30px;
-    border: 1px solid gray;
+    padding: 10px;
 }
 
-input:focus{
-        /* background-color: ; */
-    border: 2px solid #d23c2e;
-    outline: none;
-
+.success-icon, .failure-icon {
+    right: 0;
+    opacity: 0;
 }
-#submit{
+
+.failura-icon, .error {
+    color: red;
+}
+
+.success-icon {
+    color: green;
+}
+
+.error {
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+
+.or {
+    text-align: center;
+}
+
+.question {
+    font-size: 15px;
+}
+
+span {
+    color: #f2796e;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 15px;
     width: 100%;
-    /* max-width: 300px; */
-    margin-top: 20px;
-    padding: 8px;
-    background-color: #d23c2e;
+    height: 45px;
+    background-color: #f2796e;
+    border: 2px solid #f2796e;
+    border-radius: 8px;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
 }
 
-#submit:hover{
-    background-color: red;
+button:hover {
+    opacity: 0.8;
 }
 
+@media (max-width: 900px) {
+    .container{
+        flex-direction: column;
+    }
 
+    form, .content {
+        width: 100%;
+    }
+
+    .btn {
+        flex-direction: column;
+    }
+
+    .image {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 425px) {
+    form {
+        padding: 20px;
+    }
+}
